@@ -24,9 +24,9 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'eqp7wdf(i5v=4fi)#y_fq$hrjzf3d6
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
+DEBUG = bool( os.environ.get('DJANGO_DEBUG', True ) )
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.theproductivegeek.com']
 
 
 # Application definition
@@ -121,5 +121,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "main/static")
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
