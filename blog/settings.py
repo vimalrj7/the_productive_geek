@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'eqp7wdf(i5v=4fi)#y_fq$hrjzf3d6
 # DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True ) )
 
-ALLOWED_HOSTS = ['www.theproductivegeek.com']
+ALLOWED_HOSTS = ['www.theproductivegeek.com', '127.0.0.1']
 
 
 # Application definition
