@@ -6,7 +6,7 @@ from django.db import models
 admin.site.register(Img)
 class ImgInline(admin.TabularInline):
     model = Img
-    extra = 3 
+    extra = 3
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ["title", "date"]
@@ -15,8 +15,9 @@ class PostAdmin(admin.ModelAdmin):
     formfield_overrides = {
     models.CharField: {'widget': TextInput(attrs={'size':'150'})},
     models.TextField: {'widget': Textarea(attrs={'rows':30, 'cols':150})},
-    }   
+    }
     inlines = [ ImgInline, ]
     prepopulated_fields = {'slug': ('title',)}
-    
+    readonly_fields = ('date',)
+
 admin.site.register(Post, PostAdmin)
