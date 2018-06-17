@@ -18,6 +18,5 @@ class PostAdmin(admin.ModelAdmin):
     }
     inlines = [ ImgInline, ]
     prepopulated_fields = {'slug': ('title',)}
-    readonly_fields = ('date',)
 
 admin.site.register(Post, PostAdmin)
