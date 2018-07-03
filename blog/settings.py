@@ -33,7 +33,6 @@ ALLOWED_HOSTS = ['www.theproductivegeek.com', '127.0.0.1']
 
 INSTALLED_APPS = [
     'main',
-    'markdown_deux',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

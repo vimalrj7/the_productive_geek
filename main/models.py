@@ -151,6 +151,7 @@ class Img(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=140)
+    author = models.CharField(max_length=140)
     body = models.TextField(help_text=helpp)
     intro = models.TextField(null=True)
     date = models.DateField(auto_now=False, auto_now_add=False)

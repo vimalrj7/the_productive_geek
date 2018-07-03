@@ -11,6 +11,9 @@ def home(request):
 def about(request):
     return render(request, 'main/about.html')
     
+def books(request):
+    return render(request, 'main/books.html')
+    
 def single(request):
     return render(request, 'main/single.html')
     
